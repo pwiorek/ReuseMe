@@ -1,0 +1,21 @@
+.diy-preview-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.image-space {
+    border: 1px solid red;
+    height: 75px;
+    margin-top: -40px;
+    text-align: center;
+    width: 114px;
+    margin-left: -13px;
+}
+
+.diy-title {
+    margin-left: -81px;
+    font-size: 20px;
+}

@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.single-instruction {
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 75px;
+    margin: 40px;
+    border-radius: 5%;
+    text-align: center;
+}
