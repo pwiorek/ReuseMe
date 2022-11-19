@@ -10,10 +10,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from "./core/core.module";
 import { HttpClientModule } from "@angular/common/http";
 import { InstructionsModule } from './instructions/instructions.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatIconModule } from '@angular/material';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +28,7 @@ import { InstructionsModule } from './instructions/instructions.module';
     InstructionsModule,
     CoreModule,
     HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
