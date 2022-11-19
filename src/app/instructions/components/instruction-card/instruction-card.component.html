@@ -1,4 +1,9 @@
-<div class="diy-preview-card">
-    <div class="image-space">IMAGE HERE</div>
-    <h4 class="diy-title">title</h4>
-</div>
+<article class="instruction-card d-flex flex-row">
+  <div class="icon-container d-flex align-items-center mx-3">
+    <mat-icon aria-hidden="true" fontIcon="tips_and_updates">tips_and_updates</mat-icon>
+  </div>
+  <div class="instruction-card__right d-flex flex-column justify-content-center w-100 pe-3">
+    <app-rating class="pb-2" *ngIf="rating" [rating]="rating"></app-rating>
+    <h4>{{ instruction?.content | truncate: 80 }}</h4>
+  </div>
+</article>

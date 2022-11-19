@@ -13,11 +13,13 @@ import { InstructionsModule } from './instructions/instructions.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatIconModule } from '@angular/material';
 import { MaterialModule } from './material.module';
+import { FinderComponent } from "./components/finder/finder.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    FinderComponent
   ],
   imports: [
     BrowserModule,
