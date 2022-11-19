@@ -1,0 +1,13 @@
+<div class="search-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 d-flex flex-column">
+        <app-searchbar class="pt-3" (onClick)="searchClicked = true"></app-searchbar>
+      </div>
+    </div>
+
+  </div>
+  <ng-container *ngIf="searchClicked">
+    <app-filters  (hideFiltersEvent)="searchClicked = false"></app-filters>
+  </ng-container>
+</div>
