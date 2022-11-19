@@ -1,0 +1,16 @@
+.search-container {
+  position: relative;
+}
+
+app-searchbar {
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+app-filters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}

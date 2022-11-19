@@ -7,11 +7,13 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
+import { CoreModule } from "./core/core.module";
+import { HttpClientModule } from "@angular/common/http";
 import { InstructionsModule } from './instructions/instructions.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,9 @@ import { InstructionsModule } from './instructions/instructions.module';
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
-    InstructionsModule
+    InstructionsModule,
+    CoreModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
