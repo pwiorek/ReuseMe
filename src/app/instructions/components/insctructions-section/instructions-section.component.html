@@ -1,0 +1,12 @@
+<section>
+    <div class="row">
+      <div class="col-lg-12 my-2" *ngFor="let instruction of instructions">
+        <app-instruction-card
+          class="col-sm single-instruction"
+          [instruction]="instruction"
+          [routerLink]="['instructions', instruction.id]">
+        </app-instruction-card>
+      </div>
+
+    </div>
+</section>

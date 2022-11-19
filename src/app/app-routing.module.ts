@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {FinderComponent} from "./core/components/finder/finder.component";
+import {FinderComponent} from "./components/finder/finder.component";
 
 const routes: Routes = [
   {

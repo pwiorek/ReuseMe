@@ -7,7 +7,7 @@ import { environment } from "@environment/environment";
 @Injectable({
   providedIn: 'root'
 })
-export class SearchApiService {
+export class InstructionsApiService {
 
   constructor(
     private http: HttpClient
@@ -15,5 +15,9 @@ export class SearchApiService {
 
   public searchInstructions(params: HttpParams): Observable<Instruction[]> {
     return this.http.get<Instruction[]>(`${environment.apiUrl}instructions`, {params})
+  }
+
+  public getRating(id: number): Observable<number> {
+    return this.http.get<number>(`${environment.apiUrl}instructions/${id}/ratings/average`);
   }
 }
