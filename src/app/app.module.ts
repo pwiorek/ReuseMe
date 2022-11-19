@@ -10,11 +10,15 @@ import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from "./core/core.module";
 import { HttpClientModule } from "@angular/common/http";
 import { InstructionsModule } from './instructions/instructions.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatIconModule } from '@angular/material';
+import { MaterialModule } from './material.module';
 import { FinderComponent } from "./components/finder/finder.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     FinderComponent
   ],
   imports: [
@@ -26,6 +30,7 @@ import { FinderComponent } from "./components/finder/finder.component";
     InstructionsModule,
     CoreModule,
     HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
