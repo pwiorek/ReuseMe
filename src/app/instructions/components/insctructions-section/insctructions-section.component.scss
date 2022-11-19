@@ -3,3 +3,15 @@
     margin: auto;
     border: 1px solid red;
 }
+
+.single-instruction {
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 50px;
+    margin: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
