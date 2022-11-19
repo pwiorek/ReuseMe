@@ -1,0 +1,8 @@
+<p>insctructions-section works!</p>
+
+
+<section >
+    <div class="row">
+        <app-instruction-card class="col-sm" *ngFor="let item of instructions" [routerLink]="['instructions', item]"></app-instruction-card>
+    </div>
+</section>
