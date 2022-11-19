@@ -1,0 +1,6 @@
+<div class="rating d-flex flex-row justify-content-end w-auto">
+  <mat-icon *ngFor="let star of calcFullStars()" aria-hidden="true" fontIcon="star">star</mat-icon>
+  <mat-icon *ngFor="let star of calcHalfStars()" aria-hidden="true" fontIcon="star_half">star_half</mat-icon>
+  <mat-icon *ngFor="let star of calcEmptyStars()" aria-hidden="true" fontIcon="star_border">star_border</mat-icon>
+</div>
+

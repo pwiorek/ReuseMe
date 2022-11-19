@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Instruction, InstructionParams } from "@core/models/instruction.model";
 import { BehaviorSubject, Observable, Subject } from "rxjs";
-import { SearchApiService } from "@core/services/search.api.service";
+import { InstructionsApiService } from "@core/services/instructions-api.service";
 import { HttpParams } from "@angular/common/http";
 
 @Injectable({
@@ -11,7 +11,7 @@ export class SearchService {
   private instructions: BehaviorSubject<Instruction[]> = new BehaviorSubject<Instruction[]>([]);
 
   constructor(
-    private searchApi: SearchApiService
+    private searchApi: InstructionsApiService
   ) { }
 
   public fetchInstructions(instructionParams: InstructionParams): void {

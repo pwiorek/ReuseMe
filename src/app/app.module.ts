@@ -10,10 +10,12 @@ import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from "./core/core.module";
 import { HttpClientModule } from "@angular/common/http";
 import { InstructionsModule } from './instructions/instructions.module';
+import { FinderComponent } from "./components/finder/finder.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    FinderComponent
   ],
   imports: [
     BrowserModule,

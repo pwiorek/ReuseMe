@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InsctructionsSectionComponent } from './components/insctructions-section/insctructions-section.component';
+import { InstructionsSectionComponent } from './components/insctructions-section/instructions-section.component';
 import { InstructionCardComponent } from './components/instruction-card/instruction-card.component';
 import { InstructionDetailInfoComponent } from './components/instruction-detail-info/instruction-detail-info.component';
 import { RouterModule, Routes } from '@angular/router';
+import { CoreModule } from "@core/core.module";
+import { MaterialModule } from "../material.module";
 
 
 const instriuctionsRoutes: Routes = [
   {
     path: "",
-    component: InsctructionsSectionComponent
+    component: InstructionsSectionComponent
   },
   {
     path: "instructions/:id",
@@ -21,16 +23,18 @@ const instriuctionsRoutes: Routes = [
 @NgModule({
   declarations: [
     InstructionDetailInfoComponent,
-    InsctructionsSectionComponent,
+    InstructionsSectionComponent,
     InstructionCardComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot(instriuctionsRoutes)
+    RouterModule.forRoot(instriuctionsRoutes),
+    CoreModule,
+    MaterialModule
   ],
   exports: [
     InstructionDetailInfoComponent,
-    InsctructionsSectionComponent,
+    InstructionsSectionComponent,
     InstructionCardComponent
   ]
 })
