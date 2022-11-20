@@ -1,10 +1,14 @@
+@import "variables";
+
 .searchbar {
-  background-color: #F8F8F8;
+  background-color: $light_grey;
+  color: $dark;
   border-radius: 15px;
 }
 
 mat-icon {
   transform: translateY(7px);
+  color: $dark;
 }
 
 ::ng-deep .mat-form-field-underline {

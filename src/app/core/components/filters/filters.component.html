@@ -1,10 +1,12 @@
-<section class="filters-container d-flex flex-column">
-  <h3 class="m-auto">Filtry</h3>
-  <mat-form-field  appearance="fill">
-    <mat-label>Tagi</mat-label>
-    <mat-select [multiple]="true" [formControl]="tagsFormControl" ngDefaultControl (selectionChange)="filterTags($event)">
-      <mat-option *ngFor="let tag of tags" [value]="tag">{{tag}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <button mat-button color="primary" (click)="hideFilters()">Zamknij</button>
+<section class="filters-container d-flex flex-column justify-content-between h-100">
+  <div  class="d-flex flex-column w-100">
+    <h3 class="mx-auto mb-3">Filtry</h3>
+    <mat-form-field  appearance="fill">
+      <mat-label>Tagi</mat-label>
+      <mat-select [multiple]="true" [formControl]="tagsFormControl" ngDefaultControl (selectionChange)="filterTags($event)">
+        <mat-option *ngFor="let tag of tags" [value]="tag">{{tag}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <button mat-button (click)="hideFilters()">Zamknij</button>
 </section>

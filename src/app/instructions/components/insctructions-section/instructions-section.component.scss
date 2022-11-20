@@ -1,1 +1,13 @@
+@import "variables";
 
+button {
+  background-color: $red;
+  color: white;
+  border-radius: 20px;
+}
+
+mat-icon {
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}

@@ -54,6 +54,11 @@
               "node_modules/material-icons/iconfont/material-icons.css",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles"
+              ]
+            },
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]

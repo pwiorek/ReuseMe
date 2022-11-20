@@ -1,6 +1,8 @@
+@import "variables";
+
 .instruction-card {
   display: flex;
-  background-color: #F0F0F0;
+  background-color: $light_grey;
   height: 105px;
   border-radius: 10px;
 
@@ -10,15 +12,7 @@ mat-icon {
   height: 62px;
   width: 62px;
   font-size: 62px;
-}
-
-.image-space {
-    border: 1px solid red;
-    height: 75px;
-    margin-top: -40px;
-    text-align: center;
-    width: 114px;
-    margin-left: -13px;
+  color: $dark;
 }
 
 h4 {

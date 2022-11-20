@@ -13,6 +13,8 @@ import { Subject, takeUntil } from "rxjs";
 })
 export class InstructionsSectionComponent implements OnDestroy {
   public instructions: PageResponse<Instruction> = emptyPage()
+  public showPagination: boolean;
+  public diyMock = [{content: 'Lorem ipsum dolor sit amet, consectetur...', title: 'Title', img: 'assets/images/img_1.jpg'}, {content: 'Lorem ipsum dolor sit amet, consectetur...', title: 'Title', img: 'assets/images/img_2.jpg'}]
   private unsub$: Subject<void> = new Subject();
 
   constructor(
@@ -26,6 +28,11 @@ export class InstructionsSectionComponent implements OnDestroy {
       takeUntil(this.unsub$)
     ).subscribe(instructions => this.instructions = instructions);
 
+    this.searchService.fetchInstructions({page: 0, count: 3});
+  }
+
+  public showMoreInstructions(): void {
+    this.showPagination = true;
     this.searchService.fetchInstructions({page: 0, count: 5});
   }
 
