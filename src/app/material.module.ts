@@ -4,6 +4,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatSelectModule } from "@angular/material/select";
 import { MatButtonModule } from "@angular/material/button";
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -13,7 +14,8 @@ import { MatButtonModule } from "@angular/material/button";
     MatInputModule,
     MatDialogModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    MatPaginatorModule
   ],
   exports: [
     MatIconModule,
@@ -21,6 +23,7 @@ import { MatButtonModule } from "@angular/material/button";
     MatDialogModule,
     MatSelectModule,
     MatButtonModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule { }

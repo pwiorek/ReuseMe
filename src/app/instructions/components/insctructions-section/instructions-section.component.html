@@ -1,6 +1,6 @@
 <section>
     <div class="row">
-      <div class="col-lg-12 my-2" *ngFor="let instruction of instructions">
+      <div class="col-lg-12 my-2" *ngFor="let instruction of instructions.content">
         <app-instruction-card
           class="col-sm single-instruction"
           [instruction]="instruction"
@@ -9,4 +9,6 @@
       </div>
 
     </div>
+
+    <mat-paginator (page)="onPageChanged($event)" [hidePageSize]="false" [pageSizeOptions]="[5, 10]" [length]="instructions.totalEntries"></mat-paginator>
 </section>

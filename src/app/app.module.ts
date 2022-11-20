@@ -14,7 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatIconModule } from '@angular/material';
 import { MaterialModule } from './material.module';
 import { FinderComponent } from "./components/finder/finder.component";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
