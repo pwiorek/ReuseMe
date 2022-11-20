@@ -6,6 +6,7 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { SearchComponent } from './components/search/search.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { RatingComponent } from './components/rating/rating.component';
+import { CommentComponent } from './components/comment/comment.component';
 import { ReactiveFormsModule } from "@angular/forms";
 
 const components = [
@@ -23,7 +24,8 @@ const pipes = [
   declarations: [
     ...components,
     ...pipes,
-    RatingComponent
+    RatingComponent,
+    CommentComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ const pipes = [
   ],
   exports: [
     ...components,
-    ...pipes
+    ...pipes,
+    CommentComponent
   ]
 })
 export class CoreModule { }

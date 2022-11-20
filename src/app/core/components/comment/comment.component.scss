@@ -1,0 +1,33 @@
+.comment-container {
+    background-color: #F1F5ED;    
+    padding: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
+}
+
+.comment-rating {
+    position: absolute;
+    right: 40vw;
+
+}
+
+.author-data-space {
+    display: flex;
+    padding: 1vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    align-items: center;
+}
+
+.comment-author-name {
+    margin-left: 2vw;
+}
+
+h5 {
+    margin: 0;
+}
+
+.comment-author-image {
+    display: flex;
+    align-items: center;
+}
