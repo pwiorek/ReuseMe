@@ -1,4 +1,4 @@
-<section>
+<section class="main-container">
     <div class="row">
       <div class="col-lg-12 my-2" *ngFor="let instruction of instructions.content">
         <app-instruction-card
@@ -31,4 +31,7 @@
     ></app-instructions-dyi-card>
   </div>
 
+  <button class="redirect-btn" mat-fab type="button" routerLink="instruction/create">
+    <mat-icon>add</mat-icon>
+  </button>
 </section>
