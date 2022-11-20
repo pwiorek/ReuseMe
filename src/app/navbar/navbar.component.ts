@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit {
   public showFilters(): void {
     this.dialog.open(FiltersComponent, {
       width: '100vw',
+      height: '50vh'
     });
   }
 }
