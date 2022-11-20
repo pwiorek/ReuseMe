@@ -4,8 +4,8 @@
             <div class="col-lg-12 navbar-spacing">
 
                 <div class="left-side-icons">
-                    <mat-icon *ngIf="showArrowBackIcon" class="mat-icon">arrow_back</mat-icon>
-                    <mat-icon class="profile-icon mat-icon">bookmark_border</mat-icon>
+                    <mat-icon *ngIf="showArrowBackIcon" class="mat-icon" routerLink="../">arrow_back</mat-icon>
+                    <mat-icon *ngIf="showBookmarkIcon" class="profile-icon mat-icon">bookmark_border</mat-icon>
                     <mat-icon *ngIf="showFilterIcon" (click)="showFilters()" class="mat-icon">tune</mat-icon>
                 </div>
 
