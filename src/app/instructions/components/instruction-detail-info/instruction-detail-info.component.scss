@@ -80,3 +80,26 @@ app-comment {
     margin-bottom: 3vh;
     list-style-type: none;
 }
+
+.add-comment-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.add-comment-button {
+    display: flex;
+    padding: 1vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.actual-button {
+    width: 75%;
+    height: 5vh;
+    border-radius: 10vh;
+    background: #E2225C;
+    border-color: #E2225C;
+    color: white;
+}
