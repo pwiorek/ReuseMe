@@ -11,6 +11,7 @@ export interface Instruction {
 export interface InstructionParams {
   page: number;
   count: number;
-  tags?: string[];
+  tags?: string;
   category?: string[];
+  q?: string;
 }

@@ -26,8 +26,11 @@ export class SearchbarComponent implements OnInit {
     this.searchClicked = true;
   }
 
-  public searchInstructions(): void {
-    this.searchService.fetchInstructions({page: 0, count: 5})
+  public searchInstructions(query: string): void {
+    const params = this.searchService.lastParams;
+
+    params.q = query;
+    this.searchService.fetchInstructions(params)
   }
 
 }

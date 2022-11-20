@@ -1,9 +1,8 @@
-<section class="searchbar d-flex flex-row">
-  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
-  <input
-    matInput
-    placeholder="Wyszukaj frazę"
-    (click)="clickSearchbar()"
-  >
-  <button type="button" (click)="searchInstructions()">Search</button>
+<section class="searchbar d-flex flex-row w-100">
+  <mat-form-field class="example-full-width w-100 ps-3" >
+    <mat-label>Wyszukaj</mat-label>
+    <mat-icon matPrefix class="w-100">search</mat-icon>
+    <input #query type="text" matInput (keydown.enter)="searchInstructions(query.value)">
+  </mat-form-field>
 </section>
+

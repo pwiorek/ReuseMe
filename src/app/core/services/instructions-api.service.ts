@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Instruction } from "@core/models/instruction.model";
 import { environment } from "@environment/environment";
+import { PageResponse } from "@core/models/page.model";
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class InstructionsApiService {
     private http: HttpClient
   ) { }
 
-  public searchInstructions(params: HttpParams): Observable<Instruction[]> {
-    return this.http.get<Instruction[]>(`${environment.apiUrl}instructions`, {params})
+  public searchInstructions(params: HttpParams): Observable<PageResponse<Instruction>> {
+    return this.http.get<PageResponse<Instruction>>(`${environment.apiUrl}instructions`, {params})
   }
 
   public getRating(id: number): Observable<number> {
