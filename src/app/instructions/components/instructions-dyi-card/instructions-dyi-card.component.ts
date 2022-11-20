@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./instructions-dyi-card.component.scss']
 })
 export class InstructionsDyiCardComponent implements OnInit {
-
   @Input() imageSrc: string
   @Input() title: string
   @Input() content: string

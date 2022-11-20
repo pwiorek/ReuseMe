@@ -1,5 +1,17 @@
+@import "variables";
+
 .filters-container {
   background-color: white;
   height: 100%;
   width: 100%;
+}
+
+button {
+  background-color: $red;
+  color: white ;
+  border-radius: 20px;
+}
+
+h3 {
+  color: $dark;
 }

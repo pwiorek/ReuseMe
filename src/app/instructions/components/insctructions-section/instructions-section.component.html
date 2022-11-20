@@ -8,7 +8,27 @@
         </app-instruction-card>
       </div>
 
+      <ng-container *ngIf="!showPagination; else pagination">
+        <button mat-button type="button" class="w-50 m-auto my-2" (click)="showMoreInstructions()">
+          <mat-icon aria-hidden="true" fontIcon="material-icons-outlined">add</mat-icon>
+          <span class="ms-2">POKAŻ WIĘCEJ</span>
+        </button>
+      </ng-container>
     </div>
 
+  <ng-template #pagination>
     <mat-paginator (page)="onPageChanged($event)" [hidePageSize]="false" [pageSizeOptions]="[5, 10]" [length]="instructions.totalEntries"></mat-paginator>
+  </ng-template>
+</section>
+<section class="diy">
+  <p class="text-center mt-2">Przedmioty do wykorzystania: </p>
+  <div class="row d-flex flex-row">
+    <app-instructions-dyi-card class="w-50"
+      *ngFor="let diy of diyMock"
+      [content]="diy.content"
+      [imageSrc]="diy.img"
+      [title]="diy.title"
+    ></app-instructions-dyi-card>
+  </div>
+
 </section>
