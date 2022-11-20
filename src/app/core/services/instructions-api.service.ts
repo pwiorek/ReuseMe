@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { Instruction } from "@core/models/instruction.model";
 import { environment } from "@environment/environment";
 import { PageResponse } from "@core/models/page.model";
+import { Rating } from '@core/models/rating.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,13 @@ export class InstructionsApiService {
 
   public getRating(id: number): Observable<number> {
     return this.http.get<number>(`${environment.apiUrl}instructions/${id}/ratings/average`);
+  }
+
+  public getInstructionById(id: number): Observable<Instruction> {
+    return this.http.get<Instruction>(`${environment.apiUrl}instructions/${id}`)
+  }
+
+  public getRatingsForInstruction(id: number): Observable<Rating[]> {
+    return this.http.get<Rating[]>(`${environment.apiUrl}instructions/${id}/ratings`)
   }
 }

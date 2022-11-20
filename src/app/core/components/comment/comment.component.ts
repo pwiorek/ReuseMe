@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Comment } from '@core/models/comment.model';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { Rating } from '@core/models/rating.model';
+import { UsersApiService } from '@core/services/users.api.service';
 
 @Component({
   selector: 'app-comment',
@@ -9,11 +10,18 @@ import { Comment } from '@core/models/comment.model';
 })
 export class CommentComponent implements OnInit {
 
-  @Input() comment: Comment;
+  email: string = ''
+  @Input() rating: Rating;
 
-  constructor() { }
+  constructor(
+    private usersApiService: UsersApiService,
+    private cd: ChangeDetectorRef
+  ) { }
 
   ngOnInit(): void {
+    this.usersApiService.fetchUserById(this.rating.userId).subscribe(user => {this.email = user.email;
+      this.cd.detectChanges();
+      console.log(this.email)})
   }
 
 }

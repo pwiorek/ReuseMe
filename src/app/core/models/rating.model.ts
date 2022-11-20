@@ -1,5 +1,6 @@
 export interface Rating {
-  user: number,
+  userId: number,
   instructionId: number,
   rating: number,
+  comment: string,
 }

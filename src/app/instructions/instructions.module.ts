@@ -14,11 +14,6 @@ const instriuctionsRoutes: Routes = [
     path: "",
     component: InstructionsSectionComponent
   },
-
-  {
-    path: "xdd",
-    component: InstructionsDyiCardComponent
-  },
   {
     path: "instructions/:id",
     component: InstructionDetailInfoComponent

@@ -1,8 +1,8 @@
-<section class="diy-view">
+<section class="diy-view" *ngIf="instruction">
     <!-- <div class="go-back-button" routerLink="/">back</div> -->
-    <h4 class="instruction-title-section">Instruction title</h4>
+    <h4 class="instruction-title-section">{{ instruction.title }}</h4>
     <div class="image-div">
-        <img src="assets/instruction-image.svg" alt="chuj" class="example-instruction-image">
+        <img src="assets/instruction-image.svg" alt="" class="example-instruction-image">
     </div>
     <div class="instruction-author-section">
         <div class="author-image">
@@ -16,28 +16,28 @@
             <mat-chip
                 class="example-box single-chip"
                 cdkDrag
-                *ngFor="let tag of tags">
+                *ngFor="let tag of instruction.tags">
                     {{ tag }}
             </mat-chip>
         </mat-chip-list>
     </div>
     <h4 class="potrzebne-materialy">Potrzebne materiały:</h4>
     <ul class="utilized-materials">
-        <li *ngFor="let material of utilizedMaterials"> {{ material }}</li>
+        <li *ngFor="let material of instruction.additionalMaterials"> {{ material }}</li>
     </ul>
     <h5>Instrukcja:</h5>
     <ul class="instruction-list">
-        <li *ngFor="let step of instructionSteps; let i = index"> {{ i+1 }}. {{ step }} </li>
+        <li *ngFor="let step of instruction.steps; let i = index"> {{ i+1 }}. {{ step }} </li>
     </ul>
 
     <div class="comments-container">
-        <app-comment *ngFor="let item of instructionComments" [comment]="item"></app-comment>
+        <app-comment *ngFor="let item of instructionRatings" [rating]="item"></app-comment>
     </div>
 
     <div class="add-comment-container">
         <div class="add-comment-button">
             <button class="actual-button">
-                DODAJ KOMENTARZ
+                ADD COMMENT
             </button>
         </div>
     </div>
