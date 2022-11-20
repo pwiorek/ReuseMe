@@ -6,6 +6,7 @@ import { Instruction } from '@core/models/instruction.model';
 import { InstructionsApiService } from '@core/services/instructions-api.service';
 import { UsersApiService } from '@core/services/users.api.service';
 import { mergeMap, tap } from 'rxjs';
+import { User } from '@core/models/user.model';
 
 @Component({
   selector: 'app-instruction-detail-info',
@@ -14,8 +15,9 @@ import { mergeMap, tap } from 'rxjs';
 })
 export class InstructionDetailInfoComponent implements OnInit {
 
-  instruction: Instruction
+  instruction: Instruction;
   instructionRatings: Rating[] = [];
+  author: User;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,6 +40,7 @@ export class InstructionDetailInfoComponent implements OnInit {
     this.route.params.pipe(
       mergeMap(params => this.instructionsApiService.getInstructionById(params['id'])),
       tap(instruction => this.instruction = instruction),
+      tap(instruction => this.usersApiService.fetchUserById(instruction.creator).subscribe(author => this.author = author)),
       mergeMap(instruction => this.instructionsApiService.getRatingsForInstruction(instruction.id)),
       tap(ratings => this.instructionRatings = ratings)
     ).subscribe()

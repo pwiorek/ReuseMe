@@ -8,9 +8,9 @@
         <div class="author-image">
             <mat-icon class="profile-icon mat-icon instruction-author">account_circle</mat-icon>
         </div>
-        <h4>Autor instrukcji</h4>
+        <h4>{{ author.email }}</h4>
     </div>
-    <h4 class="przedmioty-do-wyk">Przedmioty do wykorzystania:</h4>
+    <h4 class="przedmioty-do-wyk">Tags:</h4>
     <div class="utilized-tags">
         <mat-chip-list class="utilized-tags">
             <mat-chip
@@ -21,7 +21,7 @@
             </mat-chip>
         </mat-chip-list>
     </div>
-    <h4 class="potrzebne-materialy">Potrzebne materiały:</h4>
+    <h4 class="potrzebne-materialy">Additional materials:</h4>
     <ul class="utilized-materials">
         <li *ngFor="let material of instruction.additionalMaterials"> {{ material }}</li>
     </ul>
