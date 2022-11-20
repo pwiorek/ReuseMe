@@ -36,7 +36,7 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
-          npm ci
+          npm ci --legacy-peer-deps
 
       - name: Build
         run: |
@@ -48,7 +48,7 @@ jobs:
           aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: eu-west-3
-          
+
       - name: Set outputs
         id: vars
         run: echo "short_commit_hash=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
@@ -67,7 +67,7 @@ jobs:
           docker tag $REGISTRY/$REPOSITORY:$IMAGE_TAG $REGISTRY/$REPOSITORY:latest
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
           docker push $REGISTRY/$REPOSITORY:latest
-          
+
       - name: Trigger deploy
         run: |
           curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" \

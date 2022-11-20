@@ -1,5 +1,16 @@
 .searchbar {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10px;
+  background-color: #F8F8F8;
+  border-radius: 15px;
+}
+
+mat-icon {
+  transform: translateY(7px);
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: .5em !important;
 }
