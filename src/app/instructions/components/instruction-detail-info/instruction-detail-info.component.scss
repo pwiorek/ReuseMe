@@ -1,5 +1,6 @@
 .diy-view {
-    text-align: center;
+    text-align: left;
+    padding: 4%;
 }
 
 .go-back-button { 
@@ -10,4 +11,57 @@
     text-align: center;
     vertical-align: center;
     border-radius: 20px;
+}
+
+.image-div {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    height: 25vh;
+    border: 1px solid red;
+    margin-top: 2vh;
+}
+
+.author-image {
+    margin-right: 2vh;
+}
+
+.instruction-author-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.utilized-tags {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+}
+
+.single-tag {
+    border: 1px solid blue;
+    padding: 0.1vh 1vh;
+    border-radius: 2vh;
+}
+
+.single-chip {                   
+    margin-right: 20vw;                   
+    border-color: blue;
+}
+
+.mat-chip-list-wrapper .mat-standard-chip, .mat-chip-list-wrapper input.mat-input-element {
+    margin-right: 10px;
+}
+
+app-comment {
+    margin-top: 20vh;
+}
+
+h4 {
+    margin-bottom: 1rem;
+}
+
+.potrzebne-materialy {
+    margin-top: 1rem;
 }
