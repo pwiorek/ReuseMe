@@ -1,0 +1,42 @@
+article {
+    width: 154.74px;
+    height: 248px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 75%;
+        margin: 0;
+
+    }
+
+    .content {
+        width: 100%;
+        height: 25%;
+        padding: 10px;
+
+        p {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            letter-spacing: 0.25px;
+
+            color: #49454F;
+        }
+
+        h4 {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            letter-spacing: 0.25px;
+
+            color: #000000;
+        }
+    }
+}

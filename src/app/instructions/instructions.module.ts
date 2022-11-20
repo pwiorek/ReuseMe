@@ -6,12 +6,18 @@ import { InstructionDetailInfoComponent } from './components/instruction-detail-
 import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from "@core/core.module";
 import { MaterialModule } from "../material.module";
+import { InstructionsDyiCardComponent } from './components/instructions-dyi-card/instructions-dyi-card.component';
 
 
 const instriuctionsRoutes: Routes = [
   {
     path: "",
     component: InstructionsSectionComponent
+  },
+
+  {
+    path: "xdd",
+    component: InstructionsDyiCardComponent
   },
   {
     path: "instructions/:id",
@@ -24,7 +30,8 @@ const instriuctionsRoutes: Routes = [
   declarations: [
     InstructionDetailInfoComponent,
     InstructionsSectionComponent,
-    InstructionCardComponent
+    InstructionCardComponent,
+    InstructionsDyiCardComponent
   ],
   imports: [
     CommonModule,
