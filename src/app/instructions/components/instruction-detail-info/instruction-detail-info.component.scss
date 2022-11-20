@@ -17,8 +17,7 @@
     width: 100%;
     text-align: center;
     vertical-align: middle;
-    height: 25vh;
-    border: 1px solid red;
+    height: 29.5vh;
     margin-top: 2vh;
 }
 
@@ -29,8 +28,9 @@
 .instruction-author-section {
     display: flex;
     flex-direction: row;
-    margin-top: 2vh;
+    margin-top: 3vh;
     margin-bottom: 2vh;
+    align-items: center;
 }
 
 .utilized-tags {
@@ -58,10 +58,25 @@ app-comment {
     margin-top: 20vh;
 }
 
-h4 {
-    margin-bottom: 1rem;
+.przedmioty-do-wyk {
+    margin-bottom: 2vh;
 }
 
 .potrzebne-materialy {
     margin-top: 1rem;
+}
+
+.instruction-author {
+    font-size: 4vh;
+}
+
+.example-instruction-image {
+    width: auto;
+    height: 100%;
+}
+
+.instruction-list {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    list-style-type: none;
 }

@@ -1,14 +1,16 @@
 <section class="diy-view">
     <!-- <div class="go-back-button" routerLink="/">back</div> -->
     <h4 class="instruction-title-section">Instruction title</h4>
-    <div class="image-div">IMAGE HERE</div>
+    <div class="image-div">
+        <img src="assets/instruction-image.svg" alt="chuj" class="example-instruction-image">
+    </div>
     <div class="instruction-author-section">
         <div class="author-image">
-            <mat-icon class="profile-icon mat-icon">account_circle</mat-icon>
+            <mat-icon class="profile-icon mat-icon instruction-author">account_circle</mat-icon>
         </div>
         <h4>Autor instrukcji</h4>
     </div>
-    <h4>Przedmioty do wykorzystania:</h4>
+    <h4 class="przedmioty-do-wyk">Przedmioty do wykorzystania:</h4>
     <div class="utilized-tags">
         <mat-chip-list class="utilized-tags">
             <mat-chip
@@ -25,7 +27,7 @@
     </ul>
     <h5>Instrukcja:</h5>
     <ul class="instruction-list">
-        <li *ngFor="let step of instructionSteps"> {{ step }} </li>
+        <li *ngFor="let step of instructionSteps; let i = index"> {{ i+1 }}. {{ step }} </li>
     </ul>
 
     <div class="comments-container">
