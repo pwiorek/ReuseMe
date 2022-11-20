@@ -15,6 +15,7 @@
 
 .image-div {
     width: 100%;
+    overflow:hidden;
     text-align: center;
     vertical-align: middle;
     height: 29.5vh;
@@ -73,6 +74,7 @@ app-comment {
 .example-instruction-image {
     width: auto;
     height: 100%;
+    overflow: hidden;
 }
 
 .instruction-list {
