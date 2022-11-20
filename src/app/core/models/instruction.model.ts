@@ -7,7 +7,9 @@ export interface Instruction {
 	steps: string[],
   content: string,
   images: string[] // array of base64 encoded images
-  category: string
+  category: string;
+  additionalMaterials: string[];
+  steps: string[];
 }
 
 export interface InstructionParams {

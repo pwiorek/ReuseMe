@@ -1,0 +1,50 @@
+@import "variables";
+
+mat-form-field {
+  width: 100%;
+}
+
+.grey-input {
+  background-color: $light-grey;
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 75%;
+  height: 50px;
+}
+
+.fab-button {
+  background-color: $light-grey;
+  color: $dark;
+  box-shadow: none;
+}
+
+mat-chip {
+  background-color: $dark !important;
+  color: $light-grey !important;
+
+  mat-icon {
+    color: $light-grey !important;
+  }
+}
+
+.img-mock {
+  height: 170px;
+  background-color: $light-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mat-icon {
+    height: 62px;
+    width: 62px;
+    font-size: 62px;
+  }
+}
+
+.submit-button {
+  background-color: $red;
+  color: white;
+  border-radius: 20px;
+  margin: auto;
+  height: 45px;
+}
