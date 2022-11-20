@@ -19,7 +19,7 @@ export class SearchService {
     this.lastParams = instructionParams;
 
     const params = new HttpParams({fromObject: {...instructionParams}})
-    this.searchApi.searchInstructions(params).subscribe(instructions => this.instructions.next(instructions))
+    this.searchApi.searchInstructions(params).subscribe(instructions => this.instructions.next(instructions.content))
   }
 
   public getInstructions(): Observable<Instruction[]> {
