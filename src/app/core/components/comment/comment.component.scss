@@ -1,8 +1,15 @@
 .comment-container {
-    background-color: #F1F5ED;    
+    background-color: #F1F5ED; 
+    display: flex; 
     padding: 1vh;
     padding-bottom: 1vh;
     margin-bottom: 1vh;
+}
+
+.actual-comment-space {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
 }
 
 .comment-rating {
