@@ -21,4 +21,8 @@ export class InstructionsApiService {
   public getRating(id: number): Observable<number> {
     return this.http.get<number>(`${environment.apiUrl}instructions/${id}/ratings/average`);
   }
+
+  public postInstruction(instruction: Instruction): Observable<any> {
+    return this.http.post<any>(`${environment.apiUrl}instructions`, { ...instruction })
+  }
 }

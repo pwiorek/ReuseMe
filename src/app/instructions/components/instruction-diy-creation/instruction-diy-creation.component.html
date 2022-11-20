@@ -1,0 +1,111 @@
+<section class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <form [formGroup]="form">
+        <mat-form-field>
+          <p>Tytuł instrukcji:</p>
+          <input matInput type="text" class="grey-input w-100" formControlName="title">
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <p>Przedmioty do ponownego wykorzystania:</p>
+          <div class="d-flex flex-row justify-content-between">
+            <input type="text"
+                   class="grey-input"
+                   #ingredientInput
+                   matInput
+                   formControlName="ingredients"
+                   [matAutocomplete]="auto1"
+                   (keydown.enter)="addIngredient(ingredientInput.value)"
+            >
+            <mat-autocomplete #auto1="matAutocomplete" class="w-75" (optionSelected)='addIngredient($event.option.value)'>
+              <mat-option class="w-75" *ngFor="let tag of tags$ | async" [value]="tag">{{tag}}</mat-option>
+            </mat-autocomplete>
+
+            <button class="fab-button" mat-fab (click)="addIngredient(ingredientInput.value)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </mat-form-field>
+
+        <ng-container *ngIf="ingredients.length > 0">
+          <mat-chip-list>
+            <mat-chip *ngFor="let ingredient of ingredients" (removed)="removeIngredient(ingredient)">
+              {{ingredient}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+          </mat-chip-list>
+        </ng-container>
+
+        <mat-form-field>
+          <p>Add additional materials (if needed)</p>
+          <div class="d-flex flex-row justify-content-between">
+            <input type="text"
+                   class="grey-input"
+                   #materialInput
+                   matInput
+                   formControlName="materials"
+                   [matAutocomplete]="auto2"
+                   (keydown.enter)="addMaterial(materialInput.value)"
+            >
+            <mat-autocomplete #auto2="matAutocomplete" class="w-50" (optionSelected)='addMaterial($event.option.value)'>
+              <mat-option class="w-50" *ngFor="let tag of tags$ | async" [value]="tag">{{tag}}</mat-option>
+            </mat-autocomplete>
+
+            <button class="fab-button" mat-fab (click)="addMaterial(materialInput.value)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </mat-form-field>
+
+        <ng-container *ngIf="materials.length > 0">
+          <mat-chip-list>
+            <mat-chip *ngFor="let material of materials" (removed)="removeMaterial(material)">
+              {{material}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+          </mat-chip-list>
+        </ng-container>
+
+        <mat-form-field>
+          <p>Add instructions steps</p>
+          <div class="d-flex flex-row justify-content-between">
+            <input type="text"
+                   class="grey-input"
+                   #contentInput
+                   matInput
+                   formControlName="content"
+                   (keydown.enter)="addInstructionStep(contentInput.value)"
+            >
+
+            <button class="fab-button" mat-fab (click)="addInstructionStep(contentInput.value)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </mat-form-field>
+
+        <ng-container *ngIf="contentSteps.length > 0">
+          <ol>
+            <li *ngFor="let step of contentSteps">{{step}}</li>
+          </ol>
+        </ng-container>
+
+        <div>
+          <p>Add an image (optional)</p>
+          <div class="img-mock">
+            <mat-icon aria-hidden="true" fontIcon="material-icons-outlined">add_a_photo</mat-icon>
+          </div>
+        </div>
+
+      <div class="w-100 d-flex justify-content-center">
+        <button mat-button type="button" class="w-75 m-auto my-4 submit-button text-uppercase" (click)="submitInstruction()">
+          <mat-icon aria-hidden="true" fontIcon="material-icons-outlined">add</mat-icon>
+          <span class="ms-2">ADD INSTRUCTION</span>
+        </button>
+      </div>
+      </form>
+    </div>
+  </div>
+</section>
+

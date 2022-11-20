@@ -23,16 +23,16 @@ const pipes = [
   declarations: [
     ...components,
     ...pipes,
-    RatingComponent
+    RatingComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
     ReactiveFormsModule
   ],
-  exports: [
-    ...components,
-    ...pipes
-  ]
+    exports: [
+        ...components,
+        ...pipes,
+    ]
 })
 export class CoreModule { }

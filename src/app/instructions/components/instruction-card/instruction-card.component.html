@@ -4,6 +4,6 @@
   </div>
   <div class="instruction-card__right d-flex flex-column justify-content-center w-100 pe-3">
     <app-rating class="pb-2" *ngIf="rating" [rating]="rating"></app-rating>
-    <h4>{{ instruction?.content | truncate: 80 }}</h4>
+    <h4>{{ instruction.content ?? instruction.title | truncate: 80 }}</h4>
   </div>
 </article>
