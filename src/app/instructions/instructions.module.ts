@@ -6,6 +6,8 @@ import { InstructionDetailInfoComponent } from './components/instruction-detail-
 import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from "@core/core.module";
 import { MaterialModule } from "../material.module";
+import { InstructionDiyCreationComponent } from './components/instruction-diy-creation/instruction-diy-creation.component';
+import { ReactiveFormsModule } from "@angular/forms";
 import { InstructionsDyiCardComponent } from './components/instructions-dyi-card/instructions-dyi-card.component';
 
 
@@ -17,6 +19,10 @@ const instriuctionsRoutes: Routes = [
   {
     path: "instructions/:id",
     component: InstructionDetailInfoComponent
+  },
+  {
+    path: 'instruction/create',
+    component: InstructionDiyCreationComponent
   }
 ]
 
@@ -26,13 +32,15 @@ const instriuctionsRoutes: Routes = [
     InstructionDetailInfoComponent,
     InstructionsSectionComponent,
     InstructionCardComponent,
+    InstructionDiyCreationComponent,
     InstructionsDyiCardComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forRoot(instriuctionsRoutes),
     CoreModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     InstructionDetailInfoComponent,

@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material';
 import { MaterialModule } from './material.module';
 import { FinderComponent } from "./components/finder/finder.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     InstructionsModule,
     CoreModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
