@@ -7,7 +7,6 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatButtonModule } from "@angular/material/button";
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
-import { MatChipsModule } from "@angular/material/chips";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 
@@ -22,7 +21,6 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     MatButtonModule,
     MatPaginatorModule,
     MatAutocompleteModule,
-    MatChipsModule,
     MatSnackBarModule
   ],
   exports: [
@@ -34,7 +32,6 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     MatButtonModule,
     MatPaginatorModule,
     MatAutocompleteModule,
-    MatChipsModule,
     MatSnackBarModule
   ]
 })
