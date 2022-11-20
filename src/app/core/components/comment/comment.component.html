@@ -1,0 +1,12 @@
+<section class="comment-container">
+    <div class="author-data-space">
+        <div class="comment-author-image">
+            <mat-icon class="profile-icon mat-icon">account_circle</mat-icon>
+        </div>
+        <h5 class="comment-author-name">{{ email }}</h5>
+        <div class="comment-rating">
+            <app-rating [rating]="rating.rating"></app-rating>
+        </div>
+    </div>
+    <div class="comment-container">{{ rating.comment }}</div>
+</section>
